@@ -1,0 +1,25 @@
+:root {
+  --about-1: #404042;
+  --about-2: #87744a;
+  --about-3: #6d1f37;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  /* height: 6000px; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sansita Swashed", system-ui;
+}
+
+span.text {
+  position: relative;
+  z-index: 2;
+  transition: 1s;
+}

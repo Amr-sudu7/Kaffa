@@ -1,0 +1,105 @@
+@media (max-width: 1300px) {
+  #Home #carouselExampleCaptions .carousel-inner .carousel-caption p {
+    width: 100%;
+  }
+
+  #Home .navbar ul {
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+  }
+
+  #About .part1 {
+    margin-bottom: 20px;
+  }
+
+  #About .part2 .unit .box {
+    max-width: 280px;
+    margin: auto;
+  }
+
+
+  #Services .animation{
+    margin: 40px 0px;
+  }
+
+
+  #Menu ul.nav-pills{
+    width: max-content;
+  }
+
+#Menu .tab-content .tab-pane .box{
+width: 280px;
+margin: auto;
+}
+
+
+#Video.modal .modal-dialog .modal-content {
+  width: 90%;
+}
+
+
+#Book .container {
+  background-image: none;
+}
+
+
+#Book form {
+  margin: auto;
+  width: 90%;
+}
+
+
+}
+
+@media (min-width: 371px) and (max-width: 1300px) {
+  #Home #carouselExampleCaptions .carousel-inner .carousel-caption p {
+    width: 80%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 1300px) {
+  #Menu .tab-content .tab-pane .box{
+width: initial;
+}
+
+#Video.modal .modal-dialog .modal-content {
+  width: 70%;
+}
+#Book .container {
+  background-image: url("../images/Book_girl.png");
+  background-size: 50%;
+}
+#Book form {
+  margin: auto;
+  width: 100%;
+}
+
+}
+
+@media (min-width: 769px) and (max-width: 1300px) {
+  #About .part2 .unit .box {
+    max-width: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+  #Home #carouselExampleCaptions .carousel-inner .carousel-caption p {
+    width: 90%;
+  }
+
+  #Home .navbar ul {
+    background-color: transparent;
+  }
+  #Services .animation{
+    margin: 0px ;
+  }
+
+  #Book .container {
+  background-size: 50%
+}
+}
+
+@media (min-width: 1181px) and (max-width: 1300px) {
+
+
+}

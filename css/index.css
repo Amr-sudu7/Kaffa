@@ -1,0 +1,586 @@
+/* ================================================ */
+/*                  Header                          */
+/* ================================================ */
+
+/* ================================================ */
+/*                 Nav Bar                          */
+/* ================================================ */
+#Home {
+  position: relative;
+}
+
+#Home .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+#Home .navbar button.navbar-toggler {
+  height: 45px;
+  width: 50px;
+  border: solid var(--bs-success) 2px;
+  outline: none;
+  box-shadow: none;
+  transition: 0.5s;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#Home .navbar button.navbar-toggler.collapsed {
+  background-color: transparent;
+}
+
+#Home .navbar button.navbar-toggler span {
+  height: 3px;
+  width: 80%;
+  background-color: var(--bs-success);
+}
+
+#Home .navbar .nav-item a {
+  letter-spacing: 2px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#Home .navbar .nav-item a span:not(.text),
+#Home .navbar .nav-item a::after,
+#Home .navbar .nav-item a::before {
+  display: block;
+  content: "";
+  height: calc(100% / 3);
+  width: 100%;
+  position: absolute;
+  background-color: var(--bs-success);
+  transition: 0.5s;
+}
+
+#Home .navbar .nav-item a span:not(.text) {
+  left: 100%;
+  top: calc(100% / 3);
+}
+
+#Home .navbar .nav-item a:hover span:not(.text) {
+  left: 0;
+}
+
+#Home .navbar .nav-item a::before {
+  right: 100%;
+  top: 0;
+}
+
+#Home .navbar .nav-item a::after {
+  right: 100%;
+  bottom: 0;
+}
+
+#Home .navbar .nav-item a:hover::before,
+#Home .navbar .nav-item a:hover::after {
+  right: 0;
+}
+
+/* ================================================ */
+/*                Carousal                          */
+/* ================================================ */
+
+#Home #carouselExampleCaptions .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--bs-success);
+}
+#Home .carousel-inner .carousel-item {
+  position: relative;
+}
+#Home .carousel-inner .carousel-item::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#Home .carousel-inner .carousel-item:nth-of-type(1) {
+  background-image: url(../images/banner1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#Home .carousel-inner .carousel-item:nth-of-type(2) {
+  background-image: url(../images/banner2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#Home .carousel-inner .carousel-item:nth-of-type(3) {
+  background-image: url(../images/banner3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#Home .carousel-inner .carousel-item:nth-of-type(4) {
+  background-image: url(../images/banner4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#Home #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption {
+  position: initial;
+  z-index: 2;
+}
+
+#Home #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption p {
+  width: 80%;
+}
+#Home #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption .buttons a {
+  padding: 5px 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+#Home #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption .buttons a::after,
+#Home #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption .buttons a::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border-top: 21px solid var(--bs-success);
+  border-bottom: 21px solid var(--bs-success);
+  border-left: 21px solid var(--bs-success);
+  transition: 1s;
+}
+
+#Home #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption .buttons a::before {
+  right: 100%;
+  border-right: 21px solid transparent;
+}
+
+#Home #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption .buttons a:hover::before {
+  right: 0%;
+}
+
+#Home #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption .buttons a:hover span.text {
+  color: var(--bs-light);
+}
+
+#Home #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption .buttons a::after {
+  left: 100%;
+  border-left: 21px solid transparent;
+}
+
+#Home #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption .buttons a:hover::after {
+  left: 0%;
+}
+
+#Home #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption .buttons,
+#Home #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption p,
+#Home #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption h5 {
+  transform: translateY(-20px);
+  opacity: 0;
+  transition-duration: 0.7s;
+}
+
+#Home #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption p {
+  transition-delay: 0.2s;
+}
+
+#Home #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption .buttons {
+  transition-delay: 0.4s;
+}
+
+#Home #carouselExampleCaptions .carousel-inner .carousel-item.active .carousel-caption .buttons,
+#Home #carouselExampleCaptions .carousel-inner .carousel-item.active .carousel-caption p,
+#Home #carouselExampleCaptions .carousel-inner .carousel-item.active .carousel-caption h5 {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* ================================================ */
+/*                About                          */
+/* ================================================ */
+#About {
+  background-image: url("../images/leaves_pattern.png");
+  background-position: center;
+}
+
+#About .part1 {
+  color: #fff;
+}
+
+#About .part1 p {
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+#About .part1 h4 {
+  font-size: 3rem;
+}
+
+#About .part1 button {
+  border: solid #fff 1px;
+  color: #fff;
+  letter-spacing: 1px;
+  overflow: hidden;
+  position: relative;
+}
+
+#About .part1 button::after,
+#About .part1 button::before {
+  content: "";
+  display: block;
+  height: 50%;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+}
+
+#About .part1 button::before {
+  bottom: 100%;
+}
+
+#About .part1 button:hover::before {
+  bottom: 50%;
+}
+#About .part1 button::after {
+  top: 100%;
+}
+
+#About .part1 button:hover::after {
+  top: 50%;
+}
+
+#About .part1 button:hover {
+  color: var(--bs-success);
+}
+
+/* Part two */
+#About .part2 .unit .box {
+  overflow: hidden;
+  padding-block: 10px;
+}
+#About .part2 .unit .box .item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-inline: 5px;
+}
+
+#About .part2 .unit .box .item .front {
+  border-radius: 10px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#About .part2 .unit .box .item:hover .front {
+  transform: rotateY(180deg);
+}
+
+#About .part2 .unit:nth-of-type(1) .box .item .front {
+  background-image: url(../images/about_front_01.jpg);
+}
+#About .part2 .unit:nth-of-type(2) .box .item .front {
+  background-image: url(../images/about_front_02.jpg);
+}
+#About .part2 .unit:nth-of-type(3) .box .item .front {
+  background-image: url(../images/about_front_03.jpg);
+}
+
+#About .part2 .unit .box .item .back {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  transition: 2s;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#About .part2 .unit .box .item:hover .back {
+  transform: rotateY(0deg);
+}
+
+#About .part2 .unit:nth-of-type(1) .box .item .back {
+  background-color: var(--about-1);
+}
+#About .part2 .unit:nth-of-type(2) .box .item .back {
+  background-color: var(--about-2);
+}
+#About .part2 .unit:nth-of-type(3) .box .item .back {
+  background-color: var(--about-3);
+}
+#About .part2 .unit .box .item .back .body button {
+  border: 1px solid #fff;
+  border-radius: 15px;
+  color: #fff;
+  transition: 1s;
+}
+#About .part2 .unit:nth-of-type(1) .box .item .back .body button:hover {
+  color: var(--about-1);
+  background-color: #fff;
+}
+#About .part2 .unit:nth-of-type(2) .box .item .back .body button:hover {
+  color: var(--about-2);
+  background-color: #fff;
+}
+#About .part2 .unit:nth-of-type(3) .box .item .back .body button:hover {
+  color: var(--about-3);
+  background-color: #fff;
+}
+#About .part2 .unit .box .item .back .body button i {
+  transition: 1s;
+}
+#About .part2 .unit .box .item .back .body button:hover i {
+  margin-left: 5px;
+}
+
+/* ================================================ */
+/*                Services                          */
+/* ================================================ */
+
+#Services {
+  background-image: url(../images/services-beans_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+#Services::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#Services p {
+  color: #c2c2c2;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+#Services .animation img {
+  animation: Services_img 1s alternate infinite;
+}
+
+/* ================================================ */
+/*                Menu                              */
+/* ================================================ */
+
+#Menu {
+  background-image: url("../images/leaves_pattern.png");
+}
+
+#Menu ul.nav-pills {
+  border: solid #fff 2px;
+  width: fit-content;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  column-gap: 20px;
+}
+
+#Menu ul.nav-pills li button {
+  transition: 1s;
+  color: #fff;
+}
+#Menu ul.nav-pills li button.active,
+#Menu ul.nav-pills li button:hover {
+  background-color: #fff;
+  color: var(--bs-success);
+}
+#Menu .tab-content .tab-pane .box {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+#Menu .tab-content .tab-pane .box {
+  transform: scale(0);
+  transition: 1s;
+}
+#Menu .tab-content .tab-pane.show .box {
+  transform: scale(1);
+}
+#Menu .tab-content .tab-pane .box .item {
+  transform: scale(0.8);
+  transition: 1s;
+}
+#Menu .tab-content .tab-pane .box:hover .item {
+  transform: scale(1);
+}
+
+#Menu .tab-content .tab-pane .box h6,
+#Menu .tab-content .tab-pane .box p {
+  position: absolute;
+  left: 0;
+  padding: 5px;
+  background-image: url("../images/leaves_pattern.png");
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transform: translateX(-100%);
+  transition: 1s;
+  color: #fff;
+  font-weight: lighter;
+}
+
+#Menu .tab-content .tab-pane .box h6 {
+  top: 10px;
+}
+
+#Menu .tab-content .tab-pane .box p {
+  bottom: 20px;
+}
+
+#Menu .tab-content .tab-pane .box:hover h6,
+#Menu .tab-content .tab-pane .box:hover p {
+  transform: translateX(0%);
+}
+
+/* ================================================ */
+/*                 Coffee                           */
+/* ================================================ */
+
+#Coffee {
+  background-image: url("../images/Beans_ice_drinks_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+#Coffee::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#Coffee .content {
+  position: relative;
+}
+#Coffee .content h2 {
+  text-shadow: 3px 3px 1px #362d27;
+}
+#Coffee .content h4 {
+  color: #fff;
+}
+#Coffee .content i {
+  color: #fff;
+}
+
+/* ================================================ */
+/*            Video medal                           */
+/* ================================================ */
+
+#Video.modal .modal-dialog {
+  max-width: initial;
+}
+#Video.modal .modal-dialog .modal-content {
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: transparent;
+  width: 50%;
+}
+
+/* ================================================ */
+/*                 BOok                             */
+/* ================================================ */
+
+#Book {
+  background-image: url("../images/Book_black_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#Book .container {
+  background-image: url("../images/Book_girl.png");
+  background-size: 60%;
+  background-position: bottom left ;
+  background-repeat: no-repeat;
+
+}
+
+
+
+
+
+#Book form {
+  background-image: url("../images/leaves_pattern.png");
+  border-radius: 10px;
+  width: 80%;
+  margin-left: auto;
+}
+
+#Book form input {
+  font-weight: lighter;
+  width: 75%;
+  margin: auto;
+}
+
+#Book form textarea {
+  resize: none;
+  height: 250px;
+  width: 75%;
+  margin: auto;
+}
+
+#Book form button {
+  position: relative;
+  transition: 1s;
+  overflow: hidden;
+}
+#Book form button::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  top: 100%;
+  left: 0;
+  transition: 0.5s;
+  background-color: var(--bs-success);
+  position: absolute;
+  background-image: url("../images/leaves_pattern.png");
+}
+
+#Book form button:hover {
+  border: 1px #fff solid;
+}
+
+#Book form button:hover::before {
+  top: 0;
+}
+
+
+footer{
+  background-color: #333333;
+}
