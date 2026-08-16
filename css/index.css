@@ -24,15 +24,15 @@
   outline: none;
   box-shadow: none;
   transition: 0.5s;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
-#Home .navbar button.navbar-toggler.collapsed {
-  background-color: transparent;
+#Home .navbar button.navbar-toggler[aria-expanded="true"] {
+  
+  background-color: #fff;
 }
 
 #Home .navbar button.navbar-toggler span {
@@ -522,63 +522,16 @@
   background-repeat: no-repeat;
 }
 
-#Book .container {
-  background-image: url("../images/Book_girl.png");
-  background-size: 60%;
-  background-position: bottom left ;
-  background-repeat: no-repeat;
-
-}
 
 
 
 
 
-#Book form {
-  background-image: url("../images/leaves_pattern.png");
-  border-radius: 10px;
-  width: 80%;
-  margin-left: auto;
-}
 
-#Book form input {
-  font-weight: lighter;
-  width: 75%;
-  margin: auto;
-}
 
-#Book form textarea {
-  resize: none;
-  height: 250px;
-  width: 75%;
-  margin: auto;
-}
 
-#Book form button {
-  position: relative;
-  transition: 1s;
-  overflow: hidden;
-}
-#Book form button::before {
-  content: "";
-  height: 100%;
-  width: 100%;
-  display: block;
-  top: 100%;
-  left: 0;
-  transition: 0.5s;
-  background-color: var(--bs-success);
-  position: absolute;
-  background-image: url("../images/leaves_pattern.png");
-}
 
-#Book form button:hover {
-  border: 1px #fff solid;
-}
 
-#Book form button:hover::before {
-  top: 0;
-}
 
 
 footer{

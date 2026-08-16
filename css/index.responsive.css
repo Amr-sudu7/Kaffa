@@ -38,16 +38,6 @@ margin: auto;
 }
 
 
-#Book .container {
-  background-image: none;
-}
-
-
-#Book form {
-  margin: auto;
-  width: 90%;
-}
-
 
 }
 
@@ -64,14 +54,6 @@ width: initial;
 
 #Video.modal .modal-dialog .modal-content {
   width: 70%;
-}
-#Book .container {
-  background-image: url("../images/Book_girl.png");
-  background-size: 50%;
-}
-#Book form {
-  margin: auto;
-  width: 100%;
 }
 
 }
@@ -94,9 +76,6 @@ width: initial;
     margin: 0px ;
   }
 
-  #Book .container {
-  background-size: 50%
-}
 }
 
 @media (min-width: 1181px) and (max-width: 1300px) {
