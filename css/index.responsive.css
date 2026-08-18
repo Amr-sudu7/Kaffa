@@ -17,28 +17,35 @@
     margin: auto;
   }
 
-
-  #Services .animation{
+  #Services .animation {
     margin: 40px 0px;
   }
 
-
-  #Menu ul.nav-pills{
+  #Menu ul.nav-pills {
     width: max-content;
   }
 
-#Menu .tab-content .tab-pane .box{
-width: 280px;
-margin: auto;
-}
+  #Menu .tab-content .tab-pane .box {
+    width: 280px;
+    margin: auto;
+  }
 
+  #Video.modal .modal-dialog .modal-content {
+    width: 90%;
+  }
 
-#Video.modal .modal-dialog .modal-content {
-  width: 90%;
-}
-
-
-
+  #Book form {
+    width: 90%;
+    margin: auto;
+  }
+  #Book .container {
+    background-image: none;
+  }
+  #Book form .input-group,
+  #Book form button,
+  #VideoModal .modal-dialog .modal-content {
+    width: 90%;
+  }
 }
 
 @media (min-width: 371px) and (max-width: 1300px) {
@@ -48,19 +55,28 @@ margin: auto;
 }
 
 @media (min-width: 577px) and (max-width: 1300px) {
-  #Menu .tab-content .tab-pane .box{
-width: initial;
-}
+  #Menu .tab-content .tab-pane .box {
+    width: initial;
+  }
 
-#Video.modal .modal-dialog .modal-content {
-  width: 70%;
-}
-
+  #Video.modal .modal-dialog .modal-content {
+    width: 70%;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1300px) {
   #About .part2 .unit .box {
     max-width: none;
+  }
+
+  #Book form {
+    width: 50%;
+    margin: initial;
+    margin-left: auto;
+  }
+  #Book .container {
+    background-image: url("../images/Book_girl.png");
+    background-size: 50%;
   }
 }
 
@@ -72,13 +88,10 @@ width: initial;
   #Home .navbar ul {
     background-color: transparent;
   }
-  #Services .animation{
-    margin: 0px ;
+  #Services .animation {
+    margin: 0px;
   }
-
 }
 
 @media (min-width: 1181px) and (max-width: 1300px) {
-
-
 }
